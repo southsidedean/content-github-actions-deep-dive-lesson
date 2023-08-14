@@ -47,10 +47,9 @@ jobs:
 
   publish: 
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Create Release
-        uses: actions/create-release@v2
+        uses: actions/create-release@v1.1.4
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
         with:
