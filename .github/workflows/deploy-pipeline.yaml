@@ -72,6 +72,7 @@ jobs:
           asset_path: ./${{ github.sha }}.zip
           asset_name: source_code_with_libraries.zip
           asset_content_type: application/zip
+          
   documentation:
     runs-on: ubuntu-latest
     needs: lint
@@ -87,4 +88,4 @@ jobs:
       - name: Deploy site
         uses: JamesIves/github-pages-deploy-action@4.1.4
           folder: docs
-          branch: gh-docs
+          branch: gh-pages
